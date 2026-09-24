@@ -1,0 +1,46 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "images/icon16.png",
+         "48": "images/icon48.png",
+         "128": "images/icon128.png"
+      }
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [
+      {
+         "js": [
+            "content.js"
+         ],
+         "matches": [
+            "<all_urls>"
+         ],
+         "run_at": "document_end"
+      }
+   ],
+   "description": "自动化操作插件，自动记录用户的鼠标键盘动作，并支持回放，代替用户执行重复的劳动。",
+   "host_permissions": [
+      "<all_urls>"
+   ],
+   "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtkszAiKhulr/YOpaDUrmjOcalz8fNd/VA78qnuGZvTWIqJgrh6PYrXgRjcNp8PB3uogkaGJFWsQgSD7IKRGOXlu9/niMK2plAf5ec4XfvX8gvPihAeqleYXN6o7MdvNEddt7WEPM9KHGQ1qpoaoYBE43IqimPg+BrFLYePGIsQSfBGp6yz/uakFog4DGNtl3MKv4DrGLkUexuoLJIR9uNYb/BK6qfyHcWffh4sIi62exA2wkfHJL7uIF6vvbm7I41Ox9AtzX9c3R3ZEkQWZFwptgzDHkI6Q56ES61o7VTcHLzqWRck5IcoufdmXnN5zdc40WeofWd8DFBYhfBhRcwIDAQAB",
+   "manifest_version": 3,
+   "name": "自动点击助手",
+   "permissions": [
+      "storage",
+      "tabs",
+      "scripting",
+      "sidePanel"
+   ],
+   "side_panel": {
+      "default_path": "sidebar.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.3"
+}
